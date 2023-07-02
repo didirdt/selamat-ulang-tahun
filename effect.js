@@ -217,6 +217,10 @@ $('document').ready(function(){
 		msgLoop(0);
 		
 	});
+
+	$('#present').click(function(){
+		location.href = "gift"
+	});
 });
 
 
