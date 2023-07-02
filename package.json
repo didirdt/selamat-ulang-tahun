@@ -4,11 +4,12 @@
   "description": "Birthday greetings..",
   "main": " ",
   "scripts": {
-    "server-node": "http-server -p 8081"
+    "server-node": "http-server -p 8088",
+    "server-production": "http-server"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/ayusharma/birthday.git"
+    "url": "git+https://github.com/didirdt/selamat-ulang-tahun.git"
   },
   "keywords": [
     "Birthday"
@@ -16,9 +17,9 @@
   "author": "Ayush Sharma",
   "license": "WTFPL",
   "bugs": {
-    "url": "https://github.com/ayusharma/birthday/issues"
+    "url": "https://github.com/didirdt/selamat-ulang-tahun/issues"
   },
-  "homepage": "https://github.com/ayusharma/birthday#readme",
+  "homepage": "https://github.com/didirdt/selamat-ulang-tahun#readme",
   "dependencies": {
     "http-server": "^0.11.1"
   }
