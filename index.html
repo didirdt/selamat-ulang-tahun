@@ -21,43 +21,46 @@
 	<meta name="apple-mobile-web-app-status-bar-style" content="black">
 	<meta http-equiv="X-UA-Compatible" content="IE=9; IE=8; IE=7; IE=EDGE" />
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css">
+	
 	<link rel="stylesheet" type="text/css" href="stylesheet.css">
 	<link rel="stylesheet" type="text/css" href="loading.css">
 	<link href='http://fonts.googleapis.com/css?family=Signika' rel='stylesheet' type='text/css'>
 	<link rel="stylesheet/less" href="cake.less">
 	<script src="//cdnjs.cloudflare.com/ajax/libs/less.js/2.1.0/less.min.js"></script>
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 
 <body>
 	<div class="loading"></div>
 	<audio class="song" controls loop>
-        <source src="hbd.mp3"></source>
+    <source src="hbd.mp3"></source>
 	   Your browser isn't invited for super fun audio time.
-    </audio>
-    <div class="balloons text-center" id="b1">
-    	<h4 style="color:#F2B300;">Selamat</h4>
-    </div>
-    <div class="balloons text-center" id="b2">
-    	<h4 style="color:#0719D4;">Ulang</h4>
-    </div>
-	<div class="balloons text-center" id="b3">
-    	<h4 style="color:#D14D39;">Tahun</h4>
-    </div>
-	<div class="balloons text-center" id="b4">
-    	<h4 style="color:#8FAD00;">Buat</h4>
-    </div>
-	<div class="balloons text-center" id="b5">
-    	<h4 style="color:#8377E4;">Kamu</h4>
-    </div>
-    <div class="balloons text-center" id="b6">
-    	<h4 style="color:#99C96A;">Rita</h4>
-    </div>
-    <div class="balloons text-center" id="b7">
-    	<h4 style="color:#20CFB4;">Ajeng</h4>
-    </div>
+  </audio>
+	<div class="container">
+		<div class="balloons text-center" id="b1">
+			<h4 style="color:#F2B300;padding-top:30px;">Selamat</h4>
+		</div>
+		<div class="balloons text-center" id="b2">
+			<h4 style="color:#0719D4;padding-top:30px;">Ulang</h4>
+		</div>
+		<div class="balloons text-center" id="b3">
+			<h4 style="color:#D14D39;padding-top:30px;">Tahun</h4>
+		</div>
+		<div class="balloons text-center" id="b4">
+			<h4 style="color:#8FAD00;padding-top:30px;">Buat</h4>
+		</div>
+		<div class="balloons text-center" id="b5">
+			<h4 style="color:#8377E4;padding-top:30px;">Kamu</h4>
+		</div>
+		<div class="balloons text-center" id="b6">
+			<h4 style="color:#99C96A;padding-top:30px;">Rita</h4>
+		</div>
+		<div class="balloons text-center" id="b7">
+			<h4 style="color:#20CFB4;padding-top:30px;">Ajeng</h4>
+		</div>
+	</div>
+	<img src="assets/Balloon-Border.png" width="100%" class="balloon-border">
 
-    <img src="assets/Balloon-Border.png" width="100%" class="balloon-border">
- 
 
 	<div class="container">
 		
@@ -144,15 +147,31 @@
 		<div class="navbar navbar-fixed-bottom">
 			<div class="row">
 				<div class="col-md-6 text-center col-md-offset-3">
-					<button class="btn btn-primary" id="turn_on">Hidupkan Lampu</button>
-					<button class="btn btn-primary" id="play">Putar Musik</button>
-					<button class="btn btn-primary" id="bannar_coming">Mulai Dekorasi</button>
-					<button class="btn btn-primary" id="balloons_flying">Naikan Balon</button>
-					<button class="btn btn-primary" id="cake_fadein">Bolu nya Jangan Lupa</button>
-					<button class="btn btn-primary" id="light_candle">Nyalakan Lilin</button>
-					<button class="btn btn-primary" id="wish_message">Selamat Ulang Tahun</button>
-					<button class="btn btn-primary" id="story">Pesan Buat Kamu</button>
-					<!-- <button class="btn btn-primary" id="cake_cut">Potong Kuenya</button> -->
+					<button class="btn btn-primary" id="turn_on">
+						<span class='fa fa-lightbulb' style="padding-right: 5px;"></span>Hidupkan Lampu
+					</button>
+					<button class="btn btn-secondary" id="play">
+						<span class='fa fa-play' style="padding-right: 5px;"></span> Putar Musik
+					</button>
+					<button class="btn btn-success" id="bannar_coming">
+						<span class='fa fa-holly-berry' style="padding-right: 5px;"></span> Mulai Dekorasi
+					</button>
+					<button class="btn btn-warning" id="balloons_flying">
+						<span class='fa fa-golf-ball-tee' style="padding-right: 5px;"></span> Tambahkan Balon
+					</button>
+					<button class="btn btn-info" id="cake_fadein">
+						<span class='fa fa-cake-candles' style="padding-right: 5px;"></span> Bolunya Juga
+					</button>
+					<button class="btn btn-danger" id="light_candle">
+						<span class='fa fa-fire' style="padding-right: 5px;"></span> Nyalakan Lilin
+					</button>
+					<button class="btn btn-primary" id="wish_message">
+						<span class='fa fa-gift' style="padding-right: 5px;"></span> Selamat Ulang Tahun
+					</button>
+					<button class="btn btn-info" id="story">
+						<span class='fa fa-hand-holding-heart' style="padding-right: 5px;"></span> Pesan Buat Kamu
+					</button>
+					<button class="btn btn-success" id="present">Ini Hadiahnya</button>
 				</div>
 			</div>
 		</div>

@@ -52,35 +52,35 @@ $('document').ready(function(){
 	});
 
 	function loopOne() {
-		var randleft = 1000*Math.random();
+		var randleft = ($(window).width() - 100)*Math.random();
 		var randtop = 500*Math.random();
 		$('#b1').animate({left:randleft,bottom:randtop},10000,function(){
 			loopOne();
 		});
 	}
 	function loopTwo() {
-		var randleft = 1000*Math.random();
+		var randleft = ($(window).width() - 100)*Math.random();
 		var randtop = 500*Math.random();
 		$('#b2').animate({left:randleft,bottom:randtop},10000,function(){
 			loopTwo();
 		});
 	}
 	function loopThree() {
-		var randleft = 1000*Math.random();
+		var randleft = ($(window).width() - 100)*Math.random();
 		var randtop = 500*Math.random();
 		$('#b3').animate({left:randleft,bottom:randtop},10000,function(){
 			loopThree();
 		});
 	}
 	function loopFour() {
-		var randleft = 1000*Math.random();
+		var randleft = ($(window).width() - 100)*Math.random();
 		var randtop = 500*Math.random();
 		$('#b4').animate({left:randleft,bottom:randtop},10000,function(){
 			loopFour();
 		});
 	}
 	function loopFive() {
-		var randleft = 1000*Math.random();
+		var randleft = ($(window).width() - 100)*Math.random();
 		var randtop = 500*Math.random();
 		$('#b5').animate({left:randleft,bottom:randtop},10000,function(){
 			loopFive();
@@ -88,14 +88,14 @@ $('document').ready(function(){
 	}
 
 	function loopSix() {
-		var randleft = 1000*Math.random();
+		var randleft = ($(window).width() - 100)*Math.random();
 		var randtop = 500*Math.random();
 		$('#b6').animate({left:randleft,bottom:randtop},10000,function(){
 			loopSix();
 		});
 	}
 	function loopSeven() {
-		var randleft = 1000*Math.random();
+		var randleft = ($(window).width() - 100)*Math.random();
 		var randtop = 500*Math.random();
 		$('#b7').animate({left:randleft,bottom:randtop},10000,function(){
 			loopSeven();
@@ -103,7 +103,8 @@ $('document').ready(function(){
 	}
 
 	$('#balloons_flying').click(function(){
-		$('.balloon-border').animate({top:-500},8000);
+		$('.balloon-border').width($(window).width()+500);
+		$('.balloon-border').animate({left:-100,top:-500},8000);
 		$('#b1,#b4,#b5,#b7').addClass('balloons-rotate-behaviour-one');
 		$('#b2,#b3,#b6').addClass('balloons-rotate-behaviour-two');
 		// $('#b3').addClass('balloons-rotate-behaviour-two');
@@ -140,7 +141,7 @@ $('document').ready(function(){
 
 		
 	$('#wish_message').click(function(){
-		 vw = $(window).width()/2;
+		 
 
 		$('#b1,#b2,#b3,#b4,#b5,#b6,#b7').stop();
 		$('#b1').attr('id','b11');
@@ -150,13 +151,27 @@ $('document').ready(function(){
 		$('#b5').attr('id','b55')
 		$('#b6').attr('id','b66')
 		$('#b7').attr('id','b77')
-		$('#b11').animate({top:240, left: vw-350},500);
-		$('#b22').animate({top:240, left: vw-250},500);
-		$('#b33').animate({top:240, left: vw-150},500);
-		$('#b44').animate({top:240, left: vw-50},500);
-		$('#b55').animate({top:240, left: vw+50},500);
-		$('#b66').animate({top:240, left: vw+150},500);
-		$('#b77').animate({top:240, left: vw+250},500);
+
+		if ($(window).width() > 768) {
+			vw = $(window).width()/2;
+			$('#b11').animate({top:240, left: vw-350},500);
+			$('#b22').animate({top:240, left: vw-250},500);
+			$('#b33').animate({top:240, left: vw-150},500);
+			$('#b44').animate({top:240, left: vw-50},500);
+			$('#b55').animate({top:240, left: vw+50},500);
+			$('#b66').animate({top:240, left: vw+150},500);
+			$('#b77').animate({top:240, left: vw+250},500);
+		}else{
+			vw = $(window).width()/2;
+			$('#b11').animate({top:140, left: vw-150},500);
+			$('#b22').animate({top:140, left: vw-50},500);
+			$('#b33').animate({top:140, left: vw+50},500);
+			$('#b44').animate({top:240, left: vw-100},500);
+			$('#b55').animate({top:240, left: vw+10},500);
+			$('#b66').animate({top:340, left: vw-130},500);
+			$('#b77').animate({top:340, left: vw+30},500);
+		}
+
 		$('.balloons').css('opacity','0.9');
 		$('.balloons h2').fadeIn(3000);
 		$(this).fadeOut('slow').delay(3000).promise().done(function(){
@@ -166,6 +181,14 @@ $('document').ready(function(){
 	
 	$('#story').click(function(){
 		$(this).fadeOut('slow');
+
+		if ($(window).width() < 768) {
+			$('#b44').fadeOut('fast')
+			$('#b55').fadeOut('fast')
+			$('#b66').fadeOut('fast')
+			$('#b77').fadeOut('fast')
+		}
+
 		$('.cake').fadeOut('fast').promise().done(function(){
 			$('.message').fadeIn('slow');
 		});
@@ -179,6 +202,7 @@ $('document').ready(function(){
 			if(i==50){
 				$("p:nth-child(49)").fadeOut('slow').promise().done(function () {
 					$('.cake').fadeIn('fast');
+					$('#present').fadeIn('slow');
 				});
 				
 			}
