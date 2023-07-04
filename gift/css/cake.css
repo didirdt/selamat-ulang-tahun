@@ -502,3 +502,7 @@ a.lk2:hover {
     border: 2px solid #BBB;
     transition: all 0.8s;
 }
+
+.plyr {
+    height: 100%;
+}
