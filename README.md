@@ -1,7 +1,11 @@
-# Happy Birthday
+# Selamat Ulang Tahun
 
-Website - [Happy Birthday](https://rishabh04-02.github.io/happy-birthday/)
+Project buat kamu yang mau ngasih hadiah ulang tahun simple website.
+## Deployment
 
-An easy to deploy, Happy Birthday animation design TEMPLATE.
+To deploy this project run
 
-View Deployments [here](https://github.com/Rishabh04-02/happy-birthday/deployments)
+```bash
+  npm install
+  npm run server-node
+```
